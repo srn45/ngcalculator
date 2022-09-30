@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-success" #title>Parent Component</h2>
+         <div>Name</div>
+         <div>
+          <input #name type="text" >
+         </div>
+        
+        <div>Mark</div>
+        <div>
+         <input #mark type="text" >
+        </div>
+
+        <div>Position</div>
+        <div>
+            <input #position type="text">
+        </div>
+        
+       <br>
+        <button class="btn btn-primary" (click)="transferdata(name.value,mark.value,position.value)" >submit</button>
+        <br> <span>{{responsed}}</span>
+        </div>
+        <div class="col-6">
+             <app-data [Namedata]="inputname" [Markdata]="inputmark" [Positiondata]="inputposition" (dataupdateevent)="UpdateTitle($event)"></app-data>
+        </div>
+       </div>
+    </div>
+
+
+
+

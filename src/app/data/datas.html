@@ -1,0 +1,29 @@
+<h2 class="text-info">Child Component</h2>
+<div class="text-primary">Name is <span class="text-danger">{{Namedata}}</span> 
+  and mark is <span class="text-danger">{{Markdata}}</span>
+  and the position is <span class="text-danger">{{Positiondata}}</span> .</div>
+
+<br>
+
+<table class="table bg-white table-bordered ">
+  <thead class="bg-light">
+    <tr>
+      <th>Name</th>
+      <th>Mark</th>
+      <th>Position</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of lstarray">
+    <tr>
+      <td>{{item.name}}</td>
+      <td>{{item.mark}}</td>
+      <td>{{item.position}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<input class="form-control" #name>
+<br>
+<a class="btn btn-primary" href="#" (click)="dataupdateevent.emit(name.value)">click</a>
